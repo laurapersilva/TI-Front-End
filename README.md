@@ -30,7 +30,11 @@ A divisão do projeto funciona em 4 sprints como dividido no repertório. Cada s
 ## 👩‍💻 Integrantes
 
 🔹Laura Menezes;
+
 🔹Vitória Magalhães;
+
 🔹Laura Persilva;
+
 🔹Fernanda Soares;
+
 🔹Júlia Lasmar;
