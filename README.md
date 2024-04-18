@@ -4,7 +4,7 @@
 
 ## 📑 Sobre o repositório
 
-Este repertório tem o objetivo de compilar todos os documentos, códigos, apresentações..., para o desenvolvimento do projeto *Apptite*, contando com a supervisão e acompanhamento dos professores da disciplina de Trabalho Interdiciplinar - Front-End, sendo esta ofertada no curso de Ciências da Computação da PUC Minas - Coração Eucarístico. 
+Este repositório tem o objetivo de compilar todos os documentos, códigos, apresentações..., para o desenvolvimento do projeto *Apptite*, contando com a supervisão e acompanhamento dos professores da disciplina de Trabalho Interdiciplinar - Front-End, sendo esta ofertada no curso de Ciências da Computação da PUC Minas - Coração Eucarístico. 
 
 ---
 
