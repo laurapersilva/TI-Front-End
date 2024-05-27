@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante individual</title>
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        /* Estilos do cabeçalho */
+        header {
+            background-color: #980809;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .palavras a.Home, a.Restaurantes ,a.Feed {
+            color: #fff;
+            font-size: 30px;
+            margin-right: 30px;
+        }
+
+        /* Estilos do conteúdo */
+        .restaurant-info {
+            background-color: #fff;
+            padding: 70px;
+            border-radius: 10px;
+            margin: 10px auto;
+            max-width: 800px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .restaurant-info h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .restaurant-info p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        /* Centralizar img ao lado dos parágrafos */
+        .restaurant-info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .content-wrapper {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .text-content {
+            margin-right: 20px;
+        }
+
+        .image-content img {
+            max-width: 80%;
+            height: auto;
+            display: block;
+            border-radius: 5px;
+        }
+
+        /* Estilos dos botões */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #980809;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background-color: #6b0000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="palavras">
+            <a href="#" class="Home">Home</a>
+            <a href="#" class="Restaurantes">Restaurantes</a>
+            <a href="#" class="Feed">Feed</a>
+        </nav>
+    </header>
+    <div class="restaurant-info">
+        <h1>KANPAI</h1>
+        <div class="content-wrapper">
+            <div class="text-content">
+                <p>Culinária japonesa ★★★★★</p>
+                <p>Endereço: Rua Pium-Í, 1122 - Cruzeiro,
+                    Belo Horizonte - MG, 30310-080</p>
+                <p>Telefone de contato: (31) 3656-4621</p>
+                <p>Horários de funcionamento: 18:00hrs - 20:00hrs</p>
+            </div>
+            <div class="image-content">
+                <img src="kanpai.jpg" alt="Prato do restaurante">
+            </div>
+        </div>
+    
+        <a href="https://kanpaibh.com.br/menu/" target="_blank" class="btn" id="menuBtn">Cardápio</a>
+        <a href="https://google.com/maps/dir//Rua+Pium-%C3%8D,+1122+-+Cruzeiro,+Belo+Horizonte+-+MG,+30310-080/@-19.9490815,-44.0136636,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0xa699cce89f3653:0x6af7a9c01e17f016!2m2!1d-43.9312619!2d-19.9491005?entry=ttu" target="_blank" class="btn" id="mapsBtn">Google Maps</a>
+    </div>
+
+    <script>
+        document.getElementById('menuBtn').addEventListener('click', function() {
+            alert('Você está sendo redirecionado para o cardápio.');
+        });
+
+        document.getElementById('mapsBtn').addEventListener('click', function() {
+            alert('Você está sendo redirecionado para o Google Maps.');
+        });
+    </script>
+</body>
+</html>
