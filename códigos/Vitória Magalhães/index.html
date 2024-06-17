@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seção de Comentários</title>
+<style>
+  body { font-family: Arial, sans-serif; background-color: lightblue;}
+  .comments-section { width: 500px; margin: auto; }
+  .comment { display: flex; align-items: center; margin-bottom: 10px; }
+  .avatar { width: 40px; height: 40px; border-radius: 50%; background: #ccc; margin-right: 10px; }
+  .username { font-weight: bold; }
+  .text { flex-grow: 1; }
+  .delete-btn { background: #dc3545; color: white; border: none; border-radius: 5px; padding: 5px 10px; cursor: pointer; margin-left: 10px; }
+  .comment-input { display: flex; margin-top: 20px; }
+  .input-field { flex-grow: 1; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+  .submit-btn { padding: 10px 15px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
+</style>
+</head>
+<body>
+<div class="comments-section">
+  <h2>Comentários</h2>
+  <div id="comments-container"></div>
+  <div class="comment-input">
+    <input type="text" class="input-field" placeholder="comentar">
+    <button class="submit-btn">Enviar</button>
+  </div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const inputField = document.querySelector('.input-field');
+    const submitBtn = document.querySelector('.submit-btn');
+    const commentsContainer = document.getElementById('comments-container');
+
+    // Função para carregar comentários do localStorage
+    function loadComments() {
+      const comments = JSON.parse(localStorage.getItem('comments')) || [];
+      commentsContainer.innerHTML = '';
+      comments.forEach((comment, index) => {
+        addCommentToDOM(comment.username, comment.text, index);
+      });
+    }
+
+    // Função para adicionar um comentário ao DOM
+    function addCommentToDOM(username, text, index) {
+      const commentDiv = document.createElement('div');
+      commentDiv.className = 'comment';
+
+      const avatarDiv = document.createElement('div');
+      avatarDiv.className = 'avatar';
+
+      const commentContentDiv = document.createElement('div');
+      commentContentDiv.className = 'comment-content';
+
+      const usernameDiv = document.createElement('div');
+      usernameDiv.className = 'username';
+      usernameDiv.textContent = username;
+
+      const textDiv = document.createElement('div');
+      textDiv.className = 'text';
+      textDiv.textContent = text;
+
+      const deleteBtn = document.createElement('button');
+      deleteBtn.className = 'delete-btn';
+      deleteBtn.textContent = 'Excluir';
+      deleteBtn.addEventListener('click', function() {
+        deleteComment(index);
+      });
+
+      commentContentDiv.appendChild(usernameDiv);
+      commentContentDiv.appendChild(textDiv);
+      commentContentDiv.appendChild(deleteBtn);
+      commentDiv.appendChild(avatarDiv);
+      commentDiv.appendChild(commentContentDiv);
+
+      commentsContainer.appendChild(commentDiv);
+    }
+
+    // Função para salvar comentários no localStorage
+    function saveComment(username, text) {
+      const comments = JSON.parse(localStorage.getItem('comments')) || [];
+      comments.push({ username, text });
+      localStorage.setItem('comments', JSON.stringify(comments));
+      return comments.length - 1; // Retorna o índice do comentário recém-adicionado
+    }
+
+    // Função para deletar um comentário
+    function deleteComment(index) {
+      let comments = JSON.parse(localStorage.getItem('comments')) || [];
+      comments.splice(index, 1);
+      localStorage.setItem('comments', JSON.stringify(comments));
+      loadComments(); // Recarrega os comentários para atualizar a lista
+    }
+
+    // Evento de clique no botão de enviar
+    submitBtn.addEventListener('click', function() {
+      const text = inputField.value.trim();
+      if (text) {
+        const username = 'User'; // Aqui você pode definir um username fixo ou obter de algum input
+        const index = saveComment(username, text);
+        addCommentToDOM(username, text, index);
+        inputField.value = '';
+      }
+    });
+
+    // Carregar comentários ao iniciar a página
+    loadComments();
+  });
+</script>
+</body>
+</html>
