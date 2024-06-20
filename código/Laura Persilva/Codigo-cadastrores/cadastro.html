@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+    <div class="caixa">
+        <img src="Logomarca1.jpg" alt="logomarca" id="logomarca">
+        <h1>Junte-se a nós com seu restaurante!</h1>
+        <form  method="post">
+            <input type="text" id="nome" placeholder="Nome do restaurante" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="telefone" id="telefone" placeholder="Telefone de contato" required>
+            <input type="endereco" id="endereco" placeholder="Endereço" required>
+            <input type="password" id="password" placeholder="Senha" required>
+            <input type="password" id="confirma_password" placeholder="Confirme sua senha" required>
+            <div class="upload-section">
+                <label for="restaurant-images">Imagens de seu restaurante:</label>
+                <input type="file" id="restaurant-images" name="restaurant_images" accept="image/*" multiple>
+            </div>
+            <div class="descricao">
+                <label for="restaurant-description">Descrição do restaurante:</label>
+                <textarea id="restaurant-description" id="descricao" placeholder="Descreva seu restaurante"></textarea>
+            </div>
+            <button onclick="window.location.href = #" type="submit" class="register-btn">Registrar-se</button>
+        </form>
+        <p class="login-link">Já possui uma conta? <a href="login.html">Log in</a></p>
+
+        <script src="app.js"></script>
+    </div>
+</body>
+</html>
