@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Perfil</title>
+    <script src="miniperfil.js"></script>
+    <link rel="stylesheet" href="style-miniperfil.css">
+</head>
+<style>
+     .button {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 18px;
+    background-color: #980809;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+}
+
+.button:hover {
+    background-color: #6a0606;
+}
+
+.tooltip {
+    visibility: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 15px;
+    background-color: #ededed;
+    color: #313131;
+    text-align: center;
+    border-radius: 3px;
+    padding: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: calc(-100% - 160px); /* Posição à direita do botão */
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    text-decoration: none;
+    font-size: smaller;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+.imagemperfil{
+    height: 90px;
+    display: flex;
+    transform: translateX(-15%);
+    float: left;
+    
+}
+.miniperfil{
+    background-color: #f4f4f4;
+    border-radius: 20px;
+    padding-left: 15px;
+    padding-bottom: 3px;
+    padding-top: 5px;
+    box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.2);
+    float: right;
+    margin-right: 30px;
+    margin-top: 30px;
+}
+.nome{
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: #6a0606;
+    transform: translateY(75%);
+}
+.bio{
+    font-size: smaller;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-weight: normal;
+    transform: translateY(0%);
+}
+li{
+    padding: 5px;
+    padding-top: 0px;
+    margin-top: 7px;
+    background-color: #e8e7e7;
+    color: #980809;
+    text-decoration: none;
+    list-style-type: none;
+    transform: translateX(-42%);
+    margin-left: 10px;
+    width: fit-content;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: smaller;
+    border-radius: 5px;
+}
+li:hover{
+    background-color: #cfcece;
+}
+.infos{
+    margin-right: 10px;
+    border-bottom-width: 10px; 
+    border-bottom: #313131 solid;
+}
+.coracao{
+    width: 18px;
+    margin-left: 6px;
+    transform: translateY(19%);
+}
+header{
+    transform: translateY(-20%);
+}
+a{
+    text-decoration: none;
+    
+}
+</style>
+<body>
+    <div class="miniperfil">
+        <header>
+            <div  class="infos">
+                <img class="imagemperfil" src="profile_icon_183860.png" alt="imagem-de-perfil">
+                <div class="infotexto">
+                    <h4 class="nome">Zezinho Marques</h4>
+                    <h5 class="bio">64 anos. Adoro meu cachorro e comida árabe.</h5>
+                </div>
+            </div>
+        </header>
+        <div class="resto">
+            <div class="botao">
+                <a href="pagina_do_perfil.html" class="button" id="profileButton">
+                    Perfil
+                    <span class="tooltip">Clique para ver o perfil completo</span>
+                </a>
+            </div>
+            <div class="restaurantes-curtidos">
+                <ul class="restaurantes">
+                    <a href="restaurante1.html"><li class="restaurante1">Restaurante 1<img class="coracao" src="coracao.png" alt="curtido"></li></a>
+                    <a href="restaurante2.html"><li class="restaurante2">Restaurante 2<img class="coracao" src="coracao.png" alt="curtido"></li></a>
+                    <a href="restaurante3.html"><li class="restaurante3">Restaurante 3<img class="coracao" src="coracao.png" alt="curtido"></li></a>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="script_post.js"></script>
+</body>
+</html>
