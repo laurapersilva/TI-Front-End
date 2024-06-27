@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appite</title>
+</head>
+
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #980809;
+}
+.caixa {
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+#logomarca{
+    width: 400px;
+    margin-left: 100px;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.upload-section {
+    margin-bottom: 20px;
+}
+.upload-section label {
+    display: block;
+    margin-bottom: 10px;
+}
+.upload-section input[type="file"] {
+    display: block;
+    margin-bottom: 10px;
+}
+.descricao textarea {
+    width: 90%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+.register-btn {
+    width: 50%;
+    padding: 20px;
+    background-color: #980809;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+
+}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 17px;
+}
+
+.mae{
+    display: flex;
+    padding: 20px;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+h3{
+    text-align: center;
+}
+</style>
+
+<body>
+    <div class="caixa">
+        <img src="../imagem/Logomarca1.jpg" alt="logomarca" id="logomarca">
+        <h1>Bem Vindo!</h1>
+        <h3>Escolha uma forma de cadastro:</h3>
+        <form  method="post">
+            <div class="mae">
+                <button type="submit" class="register-btn">
+                    <a href="cadastro_restaurante.html">Cadastrar como restaurante</a>
+                </button>
+                    
+                <button type="submit" class="register-btn">
+                    <a href="cadastro_pessoa.html">Cadastrar como usuário</a>
+                </button>
+            </div>
+        </form>
+
+        <script src="app.js"></script>
+    </div>
+</body>
+</html>
