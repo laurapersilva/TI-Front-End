@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>APPTITE</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  header {
+    background-color: #890809;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+  }
+  header a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    margin-right: 20px;
+    transition: color 0.3s;
+  }
+  header a:hover {
+    color: #ffdddd;
+  }
+  .headline {
+    text-align: center;
+    margin: 40px 0;
+    font-size: 15px; /* Tamanho da fonte reduzido */
+    font-weight: bold;
+  }
+  .filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .filters .filter-group {
+    display: flex;
+    align-items: center;
+  }
+  .filters .filter-group input[type="text"] {
+    margin-right: 10px;
+    height: 40px;
+    padding: 0 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  .filters .filter-group button {
+    background-color: #980809;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .filters .filter-group button:hover {
+    background-color: #690808;
+  }
+  .restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+  }
+  .restaurant {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+
+  }
+  .restaurant a{
+    text-decoration: none;
+    color: black;
+  }
+  .restaurant:hover {
+    transform: translateY(-5px);
+  }
+  .restaurant img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .restaurant h2 {
+    font-size: 20px;
+    margin: 15px;
+    color: #890809;
+    text-decoration: none; /* Remover sublinhado */
+  }
+  .restaurant .location,
+  .restaurant .price {
+    font-size: 16px;
+    margin: 0 15px 10px;
+
+  }
+  .endereco {
+    margin-left: 15px;
+    margin-bottom: 15px;
+  }
+  .restaurant .location {
+    color: #333;
+  }
+  .restaurant .price {
+    color: green;
+  }
+</style>
+</head>
+<body onload="mostraRestaurantes()">
+<header>
+  <div class="imagem">
+    <img src="./imgs/apptite-logo.png" alt="Logo" width="150px">
+  </div>
+  <nav>
+    <a class="menu10" href="pagina_inicial.html">Home</a>
+    <a class="menu10" href="pagina_restaurantes_geral.html">Restaurantes</a>
+    <a class="menu10" href="post.html">Feed</a>
+    <a class="menu10" href="pagina_perfil.html">Perfil</a>
+  </nav>
+</header>
+
+<div class="headline">
+  <h1>Explore restaurantes de acordo com suas preferências!</h1>
+</div>
+
+<div class="filters">
+  <div class="filter-group">
+    <input type="text" id="filtra" placeholder="Digite para filtrar">
+    <button class="botao" onclick="filtraRestaurantes(filtra.value)">Filtrar</button>
+  </div>
+</div>
+
+<div class="restaurant-grid" id="rest">
+  <!-- Exemplo de restaurante -->
+  <div class="restaurant">
+    <img src="/mnt/data/image.png" alt="Yoku Taberu">
+    <h2>Yoku Taberu</h2>
+    <div class="location">Localização: Av. Contorno - 105</div>
+    <div class="price">R$10,00 - R$20</div>
+  </div>
+  <div class="restaurant">
+    <img src="/mnt/data/image.png" alt="Butequim do Sabor">
+    <h2>Butequim do Sabor</h2>
+    <div class="location">Localização: Rua Paraíba - 300</div>
+    <div class="price">R$10,00 - R$20</div>
+  </div>
+  <div class="restaurant">
+    <img src="/mnt/data/image.png" alt="El Ranchito Mexicano">
+    <h2>El Ranchito Mexicano</h2>
+    <div class="location">Localização: Rua Sergipe - 289</div>
+    <div class="price">R$10,00 - R$20</div>
+  </div>
+  <div class="restaurant">
+    <img src="/mnt/data/image.png" alt="Imperial Garden">
+    <h2>Imperial Garden</h2>
+    <div class="location">Localização: Rua Alameda - 450</div>
+    <div class="price">R$15,00 - R$30</div>
+  </div>
+</div>
+
+<script src="./javascripts/scripts.js"></script>
+</body>
+</html>
