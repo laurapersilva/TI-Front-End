@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APPTITE</title>
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        /* Estilos do cabeçalho */
+        header {
+            background-color: #980809;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .palavras a.Home, a.Restaurantes ,a.Feed {
+            color: #fff;
+            font-size: 30px;
+            margin-right: 30px;
+        }
+
+        /* Estilos do conteúdo */
+        .restaurant-info {
+            background-color: #fff;
+            padding: 70px;
+            border-radius: 10px;
+            margin: 10px auto;
+            max-width: 800px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .restaurant-info h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .restaurant-info p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        /* Centralizar img ao lado dos parágrafos */
+        .restaurant-info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .content-wrapper {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .text-content {
+            margin-right: 20px;
+        }
+
+        .image-content img {
+            max-width: 80%;
+            height: auto;
+            display: block;
+            border-radius: 5px;
+        }
+
+        /* Estilos dos botões */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #980809;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background-color: #6b0000;
+        }
+    </style>
+</head>
+<body onload="mostraDados()">
+    <header>
+        <nav class="palavras">
+            <a href="pagina_inicial.html" class="Home">Home</a>
+            <a href="pagina_restaurantes_geral.html" class="Restaurantes">Restaurantes</a>
+            <a href="post.html" class="Feed">Feed</a>
+        </nav>
+    </header>
+    <div class="restaurant-info" id="dados">
+        <h1>KANPAI</h1>
+        <div class="content-wrapper">
+            
+        </div>
+    
+    </div>
+
+    <script src="./javascripts/scripts.js"></script>
+</body>
+</html>

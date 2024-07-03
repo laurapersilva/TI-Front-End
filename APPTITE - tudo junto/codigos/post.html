@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+    <title>APPITE</title>
+</head>
+<style>
+
+    /*julia*/
+
+    body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient( #6a0606, rgb(188, 101, 103));
+    margin: 0;
+    padding: 0;
+}
+.perfil-usuario {
+    background-color: #e7e6e6;
+    width: 80%;
+    max-width: 4000px;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);
+}
+.foto-perfil {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e6ecf5;
+}
+.foto-perfil img {
+    border-radius: 50%;
+    margin-right: 20px;
+    max-width: 100px
+}
+.foto-perfil h3 {
+    font-size: 18px;
+    color: #333;
+    
+}
+.descricao {
+    color: #666;
+    font-size: 16px;
+    padding: 20px;
+    border-bottom: 1px solid #f1f4f8;
+}
+.carousel-container {
+    position: relative;
+    width: 60%;
+    max-width: 600px;
+    overflow: hidden;
+
+}
+
+.carrossel{
+    justify-content: center;
+    overflow: hidden;
+    transform: translate(22.5%);
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;   
+}
+
+.carousel img {
+    width: 100%;
+    display: block;
+    
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.indicators {
+    text-indent: 270px;
+    margin-top: 10px;
+}
+
+.indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.indicator.active {
+    background-color: #717171;
+}
+
+.simbolos {
+    bottom: 50px;
+    left: 170px;
+    
+}
+
+.icon {
+    font-size: 24px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#curtida {
+    color: gray;
+
+}
+
+#salvar {
+    color: gray;
+}
+
+#curtida.curtir {
+    color: red;
+}
+
+#salvar.salvo {
+    color: black;
+}
+
+.simbolos{
+    font-size: 100%;
+}
+
+
+/*vitoria*/
+
+    body { 
+    font-family: Arial, sans-serif; 
+    background-color: lightblue;
+}
+    .comments-section { 
+    padding-top: 3%;
+   font-family: Roboto;
+    width: 500px; 
+    margin: auto; 
+}
+
+  .comment { 
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 10px; 
+    font-family: Roboto;
+    font-size: smaller;
+    font-weight: 100;  
+
+    
+}
+  .avatar { 
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    background: #ccc; 
+    margin-right: 10px; 
+}
+  .username { 
+    font-weight: bold; 
+}
+  .text { 
+    flex-grow: 1; 
+}
+  .delete-btn { 
+    background: #dc3545; 
+    color: white;
+    border: none; 
+    border-radius: 5px; 
+    padding: 5px 10px; 
+    cursor: pointer; 
+    margin-left: 10px; 
+}
+
+  .comment-input { 
+    display: flex; 
+    margin-top: 20px; 
+}
+
+  .input-field { 
+    flex-grow: 1; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+}
+
+  .submit-btn { 
+    padding: 10px 15px; 
+    background: #007bff; 
+    color: white; 
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+
+
+/* laura*/
+
+.button {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 18px;
+    background-color: #980809;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+}
+
+.botao {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.button:hover {
+    background-color: #6a0606;
+}
+
+.tooltip {
+    visibility: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 15px;
+    background-color: #ededed;
+    color: #313131;
+    text-align: center;
+    border-radius: 3px;
+    padding: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: calc(-100% - 160px); 
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    text-decoration: none;
+    font-size: smaller;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+.imagemperfil{
+    height: 90px;
+    display: flex;
+    transform: translateX(-15%);
+    float: left;
+    
+}
+.miniperfil{
+    background-color: #e7e6e6;
+    border-radius: 20px;
+    padding-left: 15px;
+    padding-bottom: 3px;
+    padding-top: 5px;
+    box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.2);
+    float: right;
+    margin-right: 30px;
+    margin-top: 30px;
+    padding-top: 10px;
+    transform: translate(-40%);
+    
+}
+.nome{
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: #6a0606;
+    transform: translateY(75%);
+    margin-top: 5px;
+    padding-bottom: 10px;
+
+}
+.bio{
+    font-size: smaller;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-weight: normal;
+    transform: translateY(0%);
+    padding-top: 5px;
+}
+li{
+    padding: 5px;
+    padding-top: 0px;
+    margin-top: 7px;
+    background-color: #e8e7e7;
+    color: #980809;
+    text-decoration: none;
+    list-style-type: none;
+    transform: translateX(-42%);
+    margin-left: 10px;
+    width: fit-content;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: smaller;
+    border-radius: 5px;
+}
+li:hover{
+    background-color: #cfcece;
+}
+.infos{
+    margin-right: 10px;
+    border-bottom-width: 10px; 
+    border-bottom: #313131 solid;
+}
+.coracao{
+    width: 18px;
+    margin-left: 6px;
+    transform: translateY(19%);
+}
+header{
+    transform: translateY(-20%);
+}
+a{
+    text-decoration: none;
+    
+}
+
+/* fernanda */
+
+body {
+    font-family: Arial, sans-serif;
+  }
+  .suggested-section {
+    background-color: #e7e6e6;
+    padding: 20px;
+    overflow-x: auto;
+    white-space: nowrap;
+    text-align: center;
+    transform: translate(22.5%,8%);
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);  
+  
+    
+  }
+  .profile-card {
+    display: inline-block;
+    background-color: #fff;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  .profile-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .profile-name {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+  }
+  .add-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #5cb85c;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  .scroll-arrow {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin-left: 20px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+  }
+  .icon {
+    font-size: 30px; /* Ajuste o tamanho conforme desejado */
+    margin: 0 10px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+
+  
+</style>
+<body>
+    <div class="row">
+        <div class="col">
+            <div class="suggested-section">
+                <h2>Sugerido para você</h2>
+               
+                <div class="profile-card">
+                  <span class="profile-icon"></span>
+                  <span class="profile-name">Nome User</span>
+                  <a href="#" class="add-button">Add</a>
+                </div>
+              
+                <div class="profile-card">
+                  <span class="profile-icon"></span>
+                  <span class="profile-name">Nome User</span>
+                  <a href="#" class="add-button">Add</a>
+                </div>
+               
+                <div class="profile-card">
+                  <span class="profile-icon"></span>
+                  <span class="profile-name">Nome User</span>
+                  <a href="#" class="add-button">Add</a>
+                </div>
+                
+                <div class="profile-card">
+                  <span class="profile-icon"></span>
+                  <span class="profile-name">Nome User</span>
+                  <a href="#" class="add-button">Add</a>
+                </div>
+                <!-- Scroll Arrow -->
+                <span class="scroll-arrow">></span>
+              </div>
+        </div>
+
+        <div class="col">
+            <div class="miniperfil">
+                <header>
+                    <div  class="infos">
+                        <img class="imagemperfil" src="./imgs/profile_icon_183860.png" alt="imagem-de-perfil">
+                        <div class="infotexto">
+                            <h4 class="nome">Zezinho Marques</h4>
+                            <h5 class="bio">64 anos. Adoro meu cachorro e comida árabe.</h5>
+                        </div>
+                    </div>
+                </header>
+                <div class="resto">
+                    <div class="botao">
+                        <a href="pagina_do_perfil.html" class="button" id="profileButton">
+                            Perfil
+                            <span class="tooltip">Clique para ver o perfil completo</span>
+                        </a>
+                    </div>
+                    <div class="restaurantes-curtidos">
+                        <ul class="restaurantes">
+                            <a href="restaurante1.html"><li class="restaurante1">Restaurante 1<img class="coracao" src="./imgs/coracao.png" alt="curtido"></li></a>
+                            <a href="restaurante2.html"><li class="restaurante2">Restaurante 2<img class="coracao" src="./imgs/coracao.png" alt="curtido"></li></a>
+                            <a href="restaurante3.html"><li class="restaurante3">Restaurante 3<img class="coracao" src="./imgs/coracao.png" alt="curtido"></li></a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+
+
+
+
+<div class="row">
+    <div class="col">
+        <div class="perfil-usuario">
+
+            <div class="foto-perfil">
+                <img src="./imgs/profile_icon_183860.png" alt="Foto perfil">
+                <h3>Usuário </h3>
+            </div>
+            <div class="descricao">
+                Descrição da experiência.
+            </div>
+            <div class="carrossel">
+             <div class="carousel-container">
+                <div class="carousel">
+                    <div class="carousel-slide">
+                        <img src="./imgs/semimagem.png" alt="Imagem 1">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="./imgs/semimagem.png" alt="Imagem 2">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="./imgs/semimagem.png" alt="Imagem 3">
+                    </div>
+                </div>
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+            <div class="indicators">
+                <span class="indicator" onclick="currentSlide(1)"></span>
+                <span class="indicator" onclick="currentSlide(2)"></span>
+                <span class="indicator" onclick="currentSlide(3)"></span>
+            </div>   
+            </div>
+            
+    
+            
+            <div class="comments-section">
+                <h3>Comentários</h3>
+                <div id="comments-container"></div>
+                <div class="comment-input">
+                  <input type="text" class="input-field" placeholder="comentar">
+                  <button class="submit-btn">Enviar</button>
+                </div>
+              </div>
+              <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                  const inputField = document.querySelector('.input-field');
+                  const submitBtn = document.querySelector('.submit-btn');
+                  const commentsContainer = document.getElementById('comments-container');
+              
+                  // Função para carregar comentários do localStorage
+                  function loadComments() {
+                    const comments = JSON.parse(localStorage.getItem('comments')) || [];
+                    commentsContainer.innerHTML = '';
+                    comments.forEach((comment, index) => {
+                      addCommentToDOM(comment.username, comment.text, index);
+                    });
+                  }
+              
+                  // Função para adicionar um comentário ao DOM
+                  function addCommentToDOM(username, text, index) {
+                    const commentDiv = document.createElement('div');
+                    commentDiv.className = 'comment';
+              
+                    const avatarDiv = document.createElement('div');
+                    avatarDiv.className = 'avatar';
+              
+                    const commentContentDiv = document.createElement('div');
+                    commentContentDiv.className = 'comment-content';
+              
+                    const usernameDiv = document.createElement('div');
+                    usernameDiv.className = 'username';
+                    usernameDiv.textContent = username;
+              
+                    const textDiv = document.createElement('div');
+                    textDiv.className = 'text';
+                    textDiv.textContent = text;
+              
+                    const deleteBtn = document.createElement('button');
+                    deleteBtn.className = 'delete-btn';
+                    deleteBtn.textContent = 'Excluir';
+                    deleteBtn.addEventListener('click', function() {
+                      deleteComment(index);
+                    });
+              
+                    commentContentDiv.appendChild(usernameDiv);
+                    commentContentDiv.appendChild(textDiv);
+                    commentContentDiv.appendChild(deleteBtn);
+                    commentDiv.appendChild(avatarDiv);
+                    commentDiv.appendChild(commentContentDiv);
+              
+                    commentsContainer.appendChild(commentDiv);
+                  }
+              
+                  // Função para salvar comentários no localStorage
+                  function saveComment(username, text) {
+                    const comments = JSON.parse(localStorage.getItem('comments')) || [];
+                    comments.push({ username, text });
+                    localStorage.setItem('comments', JSON.stringify(comments));
+                    return comments.length - 1; // Retorna o índice do comentário recém-adicionado
+                  }
+              
+                  // Função para deletar um comentário
+                  function deleteComment(index) {
+                    let comments = JSON.parse(localStorage.getItem('comments')) || [];
+                    comments.splice(index, 1);
+                    localStorage.setItem('comments', JSON.stringify(comments));
+                    loadComments(); // Recarrega os comentários para atualizar a lista
+                  }
+              
+                  // Evento de clique no botão de enviar
+                  submitBtn.addEventListener('click', function() {
+                    const text = inputField.value.trim();
+                    if (text) {
+                      const username = 'User'; // Aqui você pode definir um username fixo ou obter de algum input
+                      const index = saveComment(username, text);
+                      addCommentToDOM(username, text, index);
+                      inputField.value = '';
+                    }
+                  });
+              
+                  // Carregar comentários ao iniciar a página
+                  loadComments();
+                });
+              </script>
+              <div class="simbolos">
+                <span class="icon" id="curtida" onclick="toggleLike()">
+                    &#9829;
+                </span>
+              
+                <span class="icon" id="salvar" onclick="toggleSave()">
+                    &#9873;
+                </span>
+            </div>
+
+    </div>
+    
+</div>
+        <script src="./javascripts/script_post.js"></script>
+    </div>
+</body>
+</html>

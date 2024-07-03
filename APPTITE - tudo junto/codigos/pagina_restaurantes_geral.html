@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>APPTITE</title>
+<style>
+  body { font-family: Arial, sans-serif; }
+  .navbar { display: flex; justify-content: space-between; align-items: center; background-color: rgba(89, 18, 31, 1); padding: 10px; }
+  .navbar .logo { display: flex; align-items: center; }
+  .navbar .logo img { height: 50px; margin-right: 10px; }
+  .navbar .logo span { color: white; font-size: 20px; font-weight: bold; }
+  .navbar .menu { display: flex; }
+  .navbar .menu a { color: white; text-decoration: none; padding: 0 15px; }
+  .navbar .menu a:hover { background-color: #ddd; color: black; }
+  .headline { text-align: center; margin: 20px 0; }
+  .filters { display: flex; justify-content: space-around; margin-bottom: 20px; }
+  .filters div { display: flex; flex-direction: column; align-items: center; }
+  .filters label { margin-bottom: 10px; }
+  .restaurant-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .restaurant { border: 1px solid #ddd; padding: 10px; }
+  .restaurant img { width: 100%; height: auto; }
+  .restaurant h2 { margin: 10px 0; }
+  .rating { color: gold; margin: 10px 0; }
+  .price { color: green; margin: 10px 0; }
+  .location { color: blue; margin: 10px 0; }
+</style>
+</head>
+<body onload="mostraRestaurantes()">
+<div class="navbar">
+  <div class="logo">
+    
+    <span>Apptite</span>
+  </div>
+  <div class="menu">
+    <a href="pagina_inicial.html">Home</a>
+    <a href="post.html">Feed</a>
+  </div>
+</div>
+<div class="headline">
+  <h1>Explore restaurantes de acordo com suas preferências!</h1>
+</div>
+<div class="filters">
+  <input type="text" id="filtra" placeholder="Digite para filtrar"><button onclick="filtraRestaurantes(filtra.value)">Filtrar</button>
+</div>
+<div class="restaurant-grid" id="rest">
+  <!-- Repitir este bloco para cada restaurante -->
+  
+  <!-- ... -->
+</div>
+<script src="./javascripts/scripts.js"></script>
+</body>
+</html>
