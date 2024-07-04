@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+    <title>APPTITE</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: rgb(197, 197, 197);
+            background-image: url("https://images.pexels.com/photos/3184183/pexels-photo-3184183.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            height: 100vh;
+            position: relative; 
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); 
+            z-index: 1; 
+        }
+        header {
+            background-color: #890809;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 30px;
+            padding-right: 30px;
+            position: relative; 
+            z-index: 2; 
+        }
+        a {
+            font-size: 30px;
+            text-decoration: none;
+            color: white;
+            margin-right: 20px;
+        }
+        .main-section {
+            font-family: Roboto;
+            color: white; 
+            margin-top: 20px;
+            position: relative; 
+            z-index: 2; 
+        }
+        .botao {
+            background-color: #980809; 
+            color: white; 
+            padding: 10px 20px; 
+            border: none; 
+            border-radius: 5px; 
+            text-align: center; 
+            text-decoration: none; 
+            display: inline-block; 
+            font-size: 16px; 
+            cursor: pointer; 
+            transition: background-color 0.3s; 
+            font-family: Roboto;
+            margin-top: 20px;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            position: absolute;
+            top: 295px; 
+            left: 148px;
+            
+        }
+        .botao:hover {
+            background-color: #690808;
+        }
+        .botao2 {
+            background-color: #980809; 
+            color: white; 
+            padding: 10px 20px; 
+            border: none; 
+            border-radius: 5px; 
+            text-align: center; 
+            text-decoration: none; 
+            display: inline-block; 
+            font-size: 16px; 
+            cursor: pointer; 
+            transition: background-color 0.3s; 
+            font-family: Roboto;
+            margin-top: 20px;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            position: absolute;
+            top: 295px; 
+            left: 308px;
+        }
+        .botao2:hover {
+            background-color: #690808;
+            cursor: pointer;
+            transition: background-color 0.3s; 
+            
+        }
+        .menu10:hover{
+            color: #c2c2c2;
+            transition: background-color 0.3s; 
+        }
+
+        .texto-introdutorio{
+            position: absolute;
+            top: 150px; 
+            left: 149px;
+        }
+        .texto-introdutorio2{
+            position: absolute;
+            top: 195px; 
+            left: 150px;
+        }
+        .texto-descritivo{
+            font-weight: lighter;
+            font-family: 'Times New Roman', Times, serif;
+            position: absolute;
+            top: 250px; 
+            left: 150px;
+        }
+        .texto-descritivo2{
+            font-weight: lighter;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: larger;
+            position: absolute;
+            top: 275px; 
+            left: 150px;
+        }
+        a{
+            font-size: larger;
+        }
+    </style> 
+</head>
+<body>
+    <div class="overlay"></div> 
+    <header>
+        <div class="imagem">
+            <img src="./imgs/apptite-logo.png" alt="Logo" width="150px">
+        </div>
+        <div>
+            <a class="menu10" href="pagina_inicial.html">Home</a>
+            <a class="menu10" href="pagina_restaurantes_geral.html">Restaurantes</a>
+        </div>
+    </header>
+    <div class="main-section">
+        <h1 class="texto-introdutorio">Explore, saboreie e repita!</h1>
+         <h2 class="texto-introdutorio2">Encontre seu próximo destino gastronômico aqui!</h2>
+         <h3 class="texto-descritivo">O Apptite oferece uma experiência completa, desde recomendações personalizadas até avaliações honestas dos clientes.</h3>
+         <h3 class="texto-descritivo2" >Prepare-se para descobrir os segredos culinários da sua cidade.</h3>
+        <div class="btn"><a href="escolha.html"><button class="botao">Cadastre-se</button></a></div>
+        <div class="btn"><a href="login.html"><button class="botao2">Log-in</button></a></div>
+    </div>
+</body>
+</html>
